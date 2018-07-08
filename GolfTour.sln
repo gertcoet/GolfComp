@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfTourDAL", "GolfTourDAL\GolfTourDAL.csproj", "{B8C7DEEE-0191-40E3-A890-1A244B31FD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfCourseTestDrive", "GolfCourseTestDrive\GolfCourseTestDrive.csproj", "{7ABEE766-7521-491A-91CA-6F7F4E030D21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B8C7DEEE-0191-40E3-A890-1A244B31FD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C7DEEE-0191-40E3-A890-1A244B31FD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C7DEEE-0191-40E3-A890-1A244B31FD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ABEE766-7521-491A-91CA-6F7F4E030D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ABEE766-7521-491A-91CA-6F7F4E030D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ABEE766-7521-491A-91CA-6F7F4E030D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ABEE766-7521-491A-91CA-6F7F4E030D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

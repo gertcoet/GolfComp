@@ -12,6 +12,11 @@ namespace GolfTourDAL.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid GolferHoleId { get; set; }
 
+        [Required] public int GolferId { get; set; }
+
+        [Required] public int HoleId { get; set; }
+
+
         [ForeignKey("GolferId")] [Required] public virtual Golfer Golfer { get; set; }
 
         [ForeignKey("HoleId")] [Required] public virtual Hole Hole { get; set; }

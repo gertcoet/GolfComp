@@ -5,12 +5,12 @@ namespace GolfTourDAL.Repos
 {
     public interface IRepo<T>
     {
-        int Add<T>(T entity);
-        Task<int> AddAsync<T>(T entity);
+        int Add(T entity);
+        Task<int> AddAsync(T entity);
         int AddRange(IList<T> entities);
-        Task<int> AddRangeAsyn(IList<T> entities);
+        Task<int> AddRangeAsync(IList<T> entities);
         int Save(T entity);
-        Task<int> SaveAsync(IList<T> entities);
+        Task<int> SaveAsync(T entities);
         int Delete(int id);
         Task<int> DeleteAsync(int id);
         int Delete(T entity);

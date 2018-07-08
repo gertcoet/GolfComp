@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B8C7DEEE-0191-40E3-A890-1A244B31FD95}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GolfTourDAL</RootNamespace>
-    <AssemblyName>GolfTourDAL</AssemblyName>
+    <ProjectGuid>{7ABEE766-7521-491A-91CA-6F7F4E030D21}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GolfCourseTestDrive</RootNamespace>
+    <AssemblyName>GolfCourseTestDrive</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,8 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,23 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF\DataInitializer.cs" />
-    <Compile Include="EF\GolfTourEntities.cs" />
-    <Compile Include="Model\GolfCourse.cs" />
-    <Compile Include="Model\Golfer.cs" />
-    <Compile Include="Model\Hole.cs" />
-    <Compile Include="Model\GolferHole.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repos\BaseRepo.cs" />
-    <Compile Include="Repos\GolfCourseRepo.cs" />
-    <Compile Include="Repos\GolferRepo.cs" />
-    <Compile Include="Repos\HoleRepo.cs" />
-    <Compile Include="Repos\IRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GolfTourDAL\GolfTourDAL.csproj">
+      <Project>{b8c7deee-0191-40e3-a890-1a244b31fd95}</Project>
+      <Name>GolfTourDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

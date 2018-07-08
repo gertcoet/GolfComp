@@ -16,6 +16,8 @@ namespace GolfTourDAL.Model
 
         [Required] public int Par { get; set; }
 
+        [Required] public int GolfCourseId { get; set; }
+
         [ForeignKey("GolfCourseId")] public virtual GolfCourse GolfCourse { get; set; }
     }
 }

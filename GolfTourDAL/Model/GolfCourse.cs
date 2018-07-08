@@ -21,7 +21,7 @@ namespace GolfTourDAL.Model
     {
         public override string ToString()
         {
-            return $"Course name : {Name} - Id : {this.Id}";
+            return $"Course name : {Name} - Id : {this.GolfCourseId}";
         }
     }
 }
