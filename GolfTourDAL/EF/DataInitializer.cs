@@ -25,16 +25,19 @@ namespace GolfTourDAL.EF
 
             var holes = new List<Hole>
             {
-                new Hole {HoleNumber = 1, GolfCourseId = testCourse.GolfCourseId, Par = 4, Stroke = 1}
-            //    new Hole {HoleNumber = 2, GolfCourse = testCourse, Par = 4, Stroke = 2},
-            //    new Hole {HoleNumber = 3, GolfCourse = testCourse, Par = 3, Stroke = 3},
-            //    new Hole {HoleNumber = 4, GolfCourse = testCourse, Par = 4, Stroke = 4},
-            //    new Hole {HoleNumber = 5, GolfCourse = testCourse, Par = 3, Stroke = 5},
-            //    new Hole {HoleNumber = 6, GolfCourse = testCourse, Par = 4, Stroke = 6},
-            //    new Hole {HoleNumber = 7, GolfCourse = testCourse, Par = 5, Stroke = 7},
-            //    new Hole {HoleNumber = 8, GolfCourse = testCourse, Par = 4, Stroke = 8},
-            //    new Hole {HoleNumber = 9, GolfCourse = testCourse, Par = 5, Stroke = 9}
+                new Hole {HoleNumber = 1, Par = 4, Stroke = 1},
+                new Hole {HoleNumber = 2, Par = 4, Stroke = 2},
+                new Hole {HoleNumber = 3, Par = 3, Stroke = 3},
+                new Hole {HoleNumber = 4, Par = 4, Stroke = 4},
+                new Hole {HoleNumber = 5, Par = 3, Stroke = 5},
+                new Hole {HoleNumber = 6, Par = 4, Stroke = 6},
+                new Hole {HoleNumber = 7, Par = 5, Stroke = 7},
+                new Hole {HoleNumber = 8, Par = 4, Stroke = 8},
+                new Hole {HoleNumber = 9, Par = 5, Stroke = 9}
             };
+
+
+            testCourse.Holes = holes;
 
             context.SaveChanges();
         }

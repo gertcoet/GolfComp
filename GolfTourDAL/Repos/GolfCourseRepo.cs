@@ -6,7 +6,7 @@ namespace GolfTourDAL.Repos
 {
     public class GolfCourseRepo : BaseRepo<GolfCourse> , IRepo<GolfCourse>
     {
-        protected GolfCourseRepo()
+        public GolfCourseRepo()
         {
             Table = Context.GolfCourses;
         }

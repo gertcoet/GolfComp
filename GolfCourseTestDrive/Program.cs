@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GolfTourDAL.EF;
+using GolfTourDAL.Model;
 using GolfTourDAL.Repos;
 
 namespace GolfCourseTestDrive
@@ -21,13 +22,23 @@ namespace GolfCourseTestDrive
         }
 
         private static void PrintAllGolfers()
-        {
-            using (var repo = new GolferRepo())
+       {
+            //using (var repo = new GolferRepo())
+            //{
+            //    foreach (var golfer in repo.GetAll())
+            //    {
+            //        Console.WriteLine($"Golfer name = {golfer.Name}");
+            //    }
+            //}
+
+            using (var golfCourse = new GolfCourseRepo())
             {
-                foreach (var golfer in repo.GetAll())
+                var course = golfCourse.GetAll().First();
+                foreach (var hole in course.Holes)
                 {
-                    Console.WriteLine($"Golfer name = {golfer.Name}");
+                    Console.WriteLine($"Course {course.Name} hole {hole.HoleNumber.ToString()} - par {hole.Par}");
                 }
+
             }
         }
     }
