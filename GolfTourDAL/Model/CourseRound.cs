@@ -19,7 +19,7 @@ namespace GolfTourDAL.Model
 
         public ScoreType ScoreType { get; set; }
 
-        public virtual ICollection<Golfer> Golfers { get; set; }= new HashSet<Golfer>();
+        public virtual ICollection<CourseRoundHole> CourseRoundHoles { get; set; } = new HashSet<CourseRoundHole>();
 
         //public int Golfer1Id { get; set; }
         //[ForeignKey("Golfer1Id")] public virtual Golfer Golfer1 { get; set; }

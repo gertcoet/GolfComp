@@ -11,11 +11,16 @@ namespace GolfTourDAL.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long CourseRoudHoleId { get; set; }
 
-        public virtual ICollection<CourseRound> CourseRound { get; set; } = new HashSet<CourseRound>();
+        [ForeignKey("CourseRoudId")]
+        public virtual CourseRound CourseRoud { get; set; }
 
-        //public int CourseHoleId { get; set; }
-        //[ForeignKey("CourseHoleId")]
-        //public virtual CourseHole CourseHole { get; set; }
+        public int CourseHoleId { get; set; }
+        [ForeignKey("CourseHoleId")]
+        public virtual CourseHole CourseHole { get; set; }
+
+        public int GolferId { get; set; }
+        [ForeignKey("GolferId")]
+        public virtual Golfer Golfer { get; set; }
 
         public int Strokes { get; set; }
     }
