@@ -18,6 +18,5 @@ namespace GolfTourDAL.Model
 
         [StringLength(200)] public string Email { get; set; }
        
-        public virtual ICollection<Hole> Hole { get; set; } = new HashSet<Hole>();
     }
 }

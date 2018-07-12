@@ -13,7 +13,7 @@ namespace GolfTourDAL.Model
 
         [Required] public string Name { get; set; }
 
-        public virtual ICollection<Hole> Holes { get; set; } = new HashSet<Hole>();
+        public virtual ICollection<CourseHole> Holes { get; set; } = new HashSet<CourseHole>();
     }
 
 

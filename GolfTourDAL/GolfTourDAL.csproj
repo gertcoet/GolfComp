@@ -53,12 +53,17 @@
     <Compile Include="EF\GolfTourEntities.cs" />
     <Compile Include="Model\GolfCourse.cs" />
     <Compile Include="Model\Golfer.cs" />
-    <Compile Include="Model\Hole.cs" />
+    <Compile Include="Model\CourseRound.cs" />
+    <Compile Include="Model\CourseRoundHole.cs" />
+    <Compile Include="Model\CourseHole.cs" />
     <Compile Include="Model\GolferHole.cs" />
+    <Compile Include="Model\ScoreType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\BaseRepo.cs" />
+    <Compile Include="Repos\CourseRoundHoleRepo.cs" />
     <Compile Include="Repos\GolfCourseRepo.cs" />
     <Compile Include="Repos\GolferRepo.cs" />
+    <Compile Include="Repos\CourseRoundRepo.cs" />
     <Compile Include="Repos\HoleRepo.cs" />
     <Compile Include="Repos\IRepo.cs" />
   </ItemGroup>

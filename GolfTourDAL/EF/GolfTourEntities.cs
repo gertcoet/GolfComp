@@ -25,8 +25,10 @@ namespace GolfTourDAL.EF
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Golfer> Golfers { get; set; }
         public virtual DbSet<GolfCourse> GolfCourses { get; set; }
-        public virtual DbSet<GolferHole> GolferHoles { get; set; }
-        public virtual DbSet<Hole> Holes { get; set; } 
+        public virtual DbSet<CourseHole> CourseHoles { get; set; }
+        public virtual DbSet<CourseRound> CourseRound { get; set; }
+        public virtual DbSet<CourseRoundHole> CourseRoundHoles { get; set; }
+
     }
 
     //public class MyEntity

@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolfTourDAL.Model
 {
-    public class Hole
+    public class CourseHole
     {
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int HoleId { get; set; }
+        public int CourseHoleId { get; set; }
 
         [Required] public int HoleNumber { get; set; }
 

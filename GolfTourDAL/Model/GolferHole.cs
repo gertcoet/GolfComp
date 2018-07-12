@@ -19,7 +19,7 @@ namespace GolfTourDAL.Model
 
         [ForeignKey("GolferId")] [Required] public virtual Golfer Golfer { get; set; }
 
-        [ForeignKey("HoleId")] [Required] public virtual Hole Hole { get; set; }
+        [ForeignKey("CourseHoleId")] [Required] public virtual CourseHole CourseHole { get; set; }
 
         public int Shots { get; set; }
         public int Score { get; set; }
@@ -29,7 +29,7 @@ namespace GolfTourDAL.Model
     {
         public override string ToString()
         {
-            return $"{Golfer.Name} shot {this.Shots} on the hole number {Hole.HoleNumber}";
+            return $"{Golfer.Name} shot {this.Shots} on the hole number {CourseHole.HoleNumber}";
 
         }
     }

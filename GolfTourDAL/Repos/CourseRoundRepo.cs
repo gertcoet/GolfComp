@@ -4,22 +4,22 @@ using GolfTourDAL.Model;
 
 namespace GolfTourDAL.Repos
 {
-    public class HoleRepo : BaseRepo<CourseHole> , IRepo<CourseHole>
+    public class CourseRoundRepo : BaseRepo<CourseRound> , IRepo<CourseRound>
     {
-        protected HoleRepo()
+        public CourseRoundRepo()
         {
-            Table = Context.CourseHoles;
+            Table = Context.CourseRound;
         }
 
         public int Delete(int id)
         {
-            Context.Entry(new CourseHole {CourseHoleId = id}).State = EntityState.Deleted;
+            Context.Entry(new CourseRound {CourseRoundId = id}).State = EntityState.Deleted;
             return SaveChanges();
         }
 
         public Task<int> DeleteAsync(int id)
         {
-            Context.Entry(new CourseHole { CourseHoleId = id }).State = EntityState.Deleted;
+            Context.Entry(new CourseRound { CourseRoundId = id }).State = EntityState.Deleted;
             return SaveChangesAsync();
         }
     }
