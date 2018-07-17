@@ -33,12 +33,15 @@ namespace GolfTourDAL.EF
                 new CourseHole {HoleNumber = 8, Par = 4, Stroke = 8},
                 new CourseHole {HoleNumber = 9, Par = 5, Stroke = 9}
             };
+            testCourse.Holes = holes;
 
             var courseRound = new CourseRound
             {
                 Date = DateTime.Now.Subtract(new TimeSpan(0, 1, 0)),
                 ScoreType = ScoreType.MatchPlay
             };
+
+            context.CourseRound.Add(courseRound);
 
             var courseRoundHoles = new List<CourseRoundHole>
             {
@@ -86,8 +89,9 @@ namespace GolfTourDAL.EF
                 }
             };
 
-            courseRound.CourseRoundHoles = courseRoundHoles;
-            testCourse.Holes = holes;
+            courseRoundHoles.ForEach(r => context.CourseRoundHoles.Add(r));
+           
+         
             context.SaveChanges();
         }
     }

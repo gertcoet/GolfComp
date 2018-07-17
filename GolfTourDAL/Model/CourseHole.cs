@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GolfTourDAL.Model
 {
-    public class CourseHole
+    public partial class CourseHole
     {
         [Key]
         [Required]

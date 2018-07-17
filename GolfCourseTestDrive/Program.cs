@@ -31,12 +31,15 @@ namespace GolfCourseTestDrive
             //    }
             //}
 
-            using (var golfCourse = new GolfCourseRepo())
+            using (var repo = new CourseRoundHoleRepo())
             {
-                var course = golfCourse.GetAll().First();
-                foreach (var hole in course.Holes)
+                var roundDetails = repo.GetAll();
+                var course = roundDetails.FirstOrDefault().CourseHole.GolfCourse.Name;
+                var golfRound = roundDetails.FirstOrDefault().CourseRoud;
+
+                foreach (var hole in roundDetails.FirstOrDefault().CourseRoud.CourseRoundHoles)
                 {
-                    Console.WriteLine($"Course {course.Name} hole {hole.HoleNumber.ToString()} - par {hole.Par}");
+                    Console.WriteLine($"Course - {hole.CourseHole.GolfCourse.Name}, Golfer - {hole.Golfer.Name}, Hole - {hole.CourseHole.HoleNumber} , Par - {hole.CourseHole.Par} , Strokes - {hole.Strokes}");
                 }
 
             }

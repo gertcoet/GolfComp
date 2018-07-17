@@ -6,7 +6,7 @@ namespace GolfTourDAL.Repos
 {
     public class CourseRoundHoleRepo : BaseRepo<CourseRoundHole> , IRepo<CourseRoundHole>
     {
-        public void CourseRoundRepo()
+        public CourseRoundHoleRepo()
         {
             Table = Context.CourseRoundHoles;
         }
