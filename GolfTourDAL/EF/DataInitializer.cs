@@ -38,7 +38,8 @@ namespace GolfTourDAL.EF
             var courseRound = new CourseRound
             {
                 Date = DateTime.Now.Subtract(new TimeSpan(0, 1, 0)),
-                ScoreType = ScoreType.MatchPlay
+                ScoreType = ScoreType.MatchPlay,
+                GolfCourse = testCourse
             };
 
             context.CourseRound.Add(courseRound);
@@ -48,50 +49,49 @@ namespace GolfTourDAL.EF
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 1).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 1),
                     Golfer = golfers[1],
                     Strokes = 4
                 },
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 1).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 1),
                     Golfer = golfers[2],
                     Strokes = 5
                 },
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 2).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 2),
                     Golfer = golfers[1],
                     Strokes = 3
                 },
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 2).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 2),
                     Golfer = golfers[2],
                     Strokes = 4
                 },
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 3).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 3),
                     Golfer = golfers[2],
                     Strokes = 6
                 },
                 new CourseRoundHole
                 {
                     CourseRoud = courseRound,
-                    CourseHole = courseRound.GolfCourse.Holes.Where(h => h.HoleNumber == 3).FirstOrDefault(),
+                    CourseHole = courseRound.GolfCourse.Holes.FirstOrDefault(h => h.HoleNumber == 3),
                     Golfer = golfers[2],
                     Strokes = 5
                 }
             };
 
-            courseRoundHoles.ForEach(r => context.CourseRoundHoles.Add(r));
-           
-         
+            courseRoundHoles.ForEach(r => context.CourseRoundHoles.Add(r));                        
+
             context.SaveChanges();
         }
     }
