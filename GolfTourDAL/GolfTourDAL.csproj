@@ -51,6 +51,11 @@
   <ItemGroup>
     <Compile Include="EF\DataInitializer.cs" />
     <Compile Include="EF\GolfTourEntities.cs" />
+    <Compile Include="Migrations\201809160852134_InitialCreate.cs" />
+    <Compile Include="Migrations\201809160852134_InitialCreate.Designer.cs">
+      <DependentUpon>201809160852134_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\GolfCourse.cs" />
     <Compile Include="Model\Golfer.cs" />
     <Compile Include="Model\CourseRound.cs" />
@@ -71,6 +76,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809160852134_InitialCreate.resx">
+      <DependentUpon>201809160852134_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

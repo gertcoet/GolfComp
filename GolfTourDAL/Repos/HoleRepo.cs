@@ -22,5 +22,6 @@ namespace GolfTourDAL.Repos
             Context.Entry(new CourseHole { CourseHoleId = id }).State = EntityState.Deleted;
             return SaveChangesAsync();
         }
+   
     }
 }
