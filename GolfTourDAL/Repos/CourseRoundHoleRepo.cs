@@ -4,9 +4,9 @@ using GolfTourDAL.Model;
 
 namespace GolfTourDAL.Repos
 {
-    public class CourseRoundHoleRepo : BaseRepo<CourseRoundHole> , IRepo<CourseRoundHole>
+    public class ScoreRepo : BaseRepo<CourseRoundHole> , IRepo<CourseRoundHole>
     {
-        public CourseRoundHoleRepo()
+        public ScoreRepo()
         {
             Table = Context.CourseRoundHoles;
         }

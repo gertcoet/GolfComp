@@ -33,7 +33,7 @@ namespace GolfCourseTestDrive
                 }
             }
 
-            using (var repo = new CourseRoundHoleRepo())
+            using (var repo = new ScoreRepo())
             {
                 var roundDetails = repo.GetAll();
                 var course = roundDetails.FirstOrDefault().CourseHole.GolfCourse.Name;
@@ -49,7 +49,7 @@ namespace GolfCourseTestDrive
 
        private static void GetGolferAndAdd(int holeNumber, int strokes)
         {
-            using (var repo = new CourseRoundHoleRepo())
+            using (var repo = new ScoreRepo())
             {
                 var courseRound = repo.GetAll().FirstOrDefault().CourseRoud;
                 var golfer = courseRound.CourseRoundHoles.FirstOrDefault().Golfer;
